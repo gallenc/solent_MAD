@@ -1,6 +1,9 @@
 # solent_MAD
 Exercises for Solent University Mobile Application Development SWD504
 
+The course material for each session is available here
+https://edward2.solent.ac.uk/course/mad (Only available for logged in Solent Students)
+
 # Creating your repository
 
 On github create a new repository and initialise it with the Android .gitignore file.
