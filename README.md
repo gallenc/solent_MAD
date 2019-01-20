@@ -8,3 +8,14 @@ This will prevent you checking in intelij / Android specific build files which w
 
 # Using your repository
 Instead of creating a new repository for every project done in class, you should use the same repo for multiple projects but place each project in a seperate folder.
+
+
+![alt text](../solent_Mad/images/CreateProject.png "Figure CreateProject.png")
+
+![alt text](../solent_Mad/images/TargetKitKat.png "Figure TargetKitKat.png")
+
+![alt text](../solent_Mad/images/EmptyActivity.png "Figure EmptyActivity.png")
+
+
+
+
