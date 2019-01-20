@@ -32,11 +32,29 @@ Create a new folder called session1. Use this folder to create your new android 
 
 ![alt text](../master/images/CreateProject.png "Figure CreateProject.png")
 
+Note that if you have checked out your project into
+```
+C://gitrepos/solent_MAD/
+```
+and created a new session1 folder, then your HelloWorld project should be created in 
+```
+C://gitrepos/solent_MAD/session1/HelloWorld
+```
+IMPORTANT - DO NOT HAVE ANY SPACES IN YOUR CLASS PATH
 
+# Checking in your work
+You should regularly commit changes as you go along and at the end of your class you should push your changes back up to your repository
+```
+# add all of the changew to the latest commit
+git add --all
+# commit your changes
+git commit -m 'this is my first commit...'
+# check all is ok
+git status
+# push your changes
+git push
 
-![alt text](../master/images/TargetKitKat.png "Figure TargetKitKat.png")
-
-![alt text](../master/images/EmptyActivity.png "Figure EmptyActivity.png")
+```
 
 
 
