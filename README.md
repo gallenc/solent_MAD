@@ -7,7 +7,14 @@ https://edward2.solent.ac.uk/course/mad (Only available for logged in Solent Stu
 
 # Getting Started - Using Git
 
-You can choose to save your work on a USB stick but it will be much safer and better practice to use Github to store your work as you go along. 
+You can choose to save your work on a USB stick but it will be better practice ( and less chance of loosing anything) if you use Github to store your work as you go along.  
+
+You should check all of your class work into the folder [AAA_MyClassWork](../master/AAA_MyClassWork/)
+(for conveniencec the AAA is to make sure it is alphabetically the top folder in your directory)
+
+NOTE ONLY MAKE CHANGES IN YOUR [AAA_MyClassWork](../master/AAA_MyClassWork/) PROJECT DIRECTORY TO AVOID CLASHES WITH UPSTREAM REPO
+
+# Creating your repository
 
 You should check all of your class work into the folder [AAA_MyClassWork](../master/AAA_MyClassWork/)
 (for conveniencec the AAA is to make sure it is alphabetically the top folder in your directory)
@@ -17,18 +24,31 @@ NOTE ONLY MAKE CHANGES IN YOUR [AAA_MyClassWork](../master/AAA_MyClassWork/) PRO
 # Creating your repository
 
 1. If you do not have one, create a new account on github
+The easiest way to get started will be to fork my repository.
 
-2. On github, create a new repository for the class. Name is something like CM504 or solent_MAD. 
+1. If you do not have one, create a new account on github and / or sign into your account.
+
+2. navigate to this repo and click FORK above. You will now have a copy of this repo in your own directory.
+
+2b. (ALTERNATIVELY) if you are creatign a new empty repo on github, create a new repository for the class. Name is something like CM504 or solent_MAD. 
+
 IMPORTANT initialise the repository with the Android .gitignore file. (you may also select to create a README.md file). 
-This will prevent you checking in intelij / Android specific build files which will filling up your repo with junk
+This will prevent you checking in intelij / Android specific build files which will filling up your repo with junk.)
 
 3. check out your new repository onto your local machine. 
-First create a new folder near the root of C: drive, call it gitrepos. 
-Right click on the folder and Open a git bash terminal. 
-Get the url of the repository by right clicking on CLONE OR DOWNLOAD. Copy the HTTPS url and in the git terminal type
+First create a new folder near the root of C: drive or in your C:/users/-YOUR-USERNAME- folder. Call it something like gitrepos. Make sure it has no spaces in the classpath name. e.g.
 ```
+C:\Users\gallenc\gitrepos\
+```
+Right click in the folder and open a git bash terminal. 
+Get the url of the repository by right clicking on CLONE OR DOWNLOAD. Copy the HTTPS url (NOT the git:// url) and in the git terminal type
+```
+
 git clone https://-YOUR REPOSITORY URL-
 cd -YOUR REPOSITORY-
+
+cd C:\Users\gallenc\gitrepos\solent_MAD  # modify for your folder
+
 git status
 ```
 This will check you have correctly checked out the repo. You will need to check out the repo every week as the C: drive will be wiped.
