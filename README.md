@@ -4,9 +4,17 @@ Exercises for Solent University Mobile Application Development SWD504
 The course material for each session is available here
 https://edward2.solent.ac.uk/course/mad (Only available for logged in Solent Students)
 
-# Creating your repository
+
+# Getting Started - Using Git
 
 You can choose to save your work on a USB stick but it will be much safer and better practice to use Github to store your work as you go along. 
+
+You should check all of your class work into the folder [AAA_MyClassWork](../master/AAA_MyClassWork/)
+(for conveniencec the AAA is to make sure it is alphabetically the top folder in your directory)
+
+NOTE ONLY MAKE CHANGES IN YOUR [AAA_MyClassWork](../master/AAA_MyClassWork/) PROJECT DIRECTORY TO AVOID CLASHES WITH UPSTREAM REPO
+
+# Creating your repository
 
 1. If you do not have one, create a new account on github
 
