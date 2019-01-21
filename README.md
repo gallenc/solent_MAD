@@ -65,7 +65,7 @@ The next time you want to work on your project, you will need to point Androind 
 ```
 C://gitrepos/solent_MAD/session1/HelloWorld
 ```
-![alt text](../master/images/WelcomeOpenProjec.png "Figure WelcomeOpenProject.png")
+![alt text](../master/images/WelcomeOpenProject.png "Figure WelcomeOpenProject.png")
 
 ![alt text](../master/images/OpenProject.png "Figure OpenProject.png")
 
