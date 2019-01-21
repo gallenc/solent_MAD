@@ -6,9 +6,13 @@ https://edward2.solent.ac.uk/course/mad (Only available for logged in Solent Stu
 
 # Creating your repository
 
-You can choose to save your work on a USB stick but it will be much safer and better practice to use Github to store your work as you go along. 
+You can choose to save your work on a USB stick but it will be better practice ( and less chance of loosing anything) if you use Github to store your work as you go along.  
 
-1. If you do not have one, create a new account on github
+The easiest way to get started will be to fork my repository.
+
+1. If you do not have one, create a new account on github and / or sign into your account.
+
+2. navigate to this repo and click FORK above. You will now have a copy of this repo in your own directory.
 
 2. On github, create a new repository for the class. Name is something like CM504 or solent_MAD. 
 IMPORTANT initialise the repository with the Android .gitignore file. (you may also select to create a README.md file). 
