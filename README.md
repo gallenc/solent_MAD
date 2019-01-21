@@ -56,6 +56,21 @@ git push
 
 ```
 
+# Next Time checking out your work
+The next time you want to work on your project, you will need to point Androind Studio to the checked out project
+
+1. check out your project again using git clone etc
+
+2. open android studio and select your project as below
+```
+C://gitrepos/solent_MAD/session1/HelloWorld
+```
+![alt text](../master/images/CreateProject.png "Figure WelcomeOpenProject.png")
+
+![alt text](../master/images/CreateProject.png "Figure OpenProject.png")
+
+Your project will be imported into Android Studio and built.
+
 
 
 
