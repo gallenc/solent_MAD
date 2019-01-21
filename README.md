@@ -40,7 +40,9 @@ cd C:\Users\gallenc\gitrepos\solent_MAD  # modify for your folder
 
 git status
 ```
-This will check you have correctly checked out the repo. You will need to check out the repo every week as the C: drive will be wiped.
+This will check you have correctly checked out the repo. 
+
+IMPORTANT You will need to clone your every session as the C: drive will be wiped when you log out.
 
 # Using your repository
 Instead of creating a new repository for every exercise in class, you should use the same repo for multiple projects but place each project in a seperate folder.
@@ -78,6 +80,7 @@ git status
 git push
 
 ```
+IMPORTANT - MAKE SURE YOU CAN SEE YOUR FILES IN YOUR  GITHUB REPOSITORY AFTER YOU HAVE CHECKED THEM IN.
 
 # Next Time checking out your work
 The next time you want to work on your project, you will need to point Android Studio to the checked out project
