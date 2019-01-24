@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HelloWorldLayouts</string>
+    <string name="convertBtn">Convert!</string>
+    <string name="hello">your result will appear hear</string>
+</resources>
