@@ -6,7 +6,7 @@ https://edward2.solent.ac.uk/course/mad/part3.xhtml
 
 Mapping1 is class example and Exercise 1
 
-![alt text](../topic3/images/Screenshot_Map1.png"Figure Screenshot_Map1.png")
+![alt text](../topic3/images/Screenshot_Map1.png "Figure Screenshot_Map1.png")
 
 ## Exercise 2
 
