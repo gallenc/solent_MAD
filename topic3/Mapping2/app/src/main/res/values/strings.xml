@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Mapping2</string>
+    <string name="button1">GO!</string>
+    <string name="button2">Reset</string>
+    <string name="latitude">latitude</string>
+    <string name="longitude">longitude</string>
+</resources>
