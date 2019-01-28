@@ -27,6 +27,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     // added osmdroid to support mapping
+    // note on later sdks this may need to be implementation instead of compile
     compile 'org.osmdroid:osmdroid-android:5.6.5@aar'
 
 }

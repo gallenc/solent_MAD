@@ -22,7 +22,7 @@
             android:gravity="center"
             android:id="@+id/latitude"
             android:layout_toRightOf="@id/tv2"
-            android:inputType="numberDecimal"
+            android:inputType="numberDecimal|numberSigned"
             android:textSize="10pt"
             android:hint="@string/latitude"
             />
@@ -45,7 +45,7 @@
             android:gravity="center"
             android:id="@+id/longitude"
             android:layout_toRightOf="@id/tv3"
-            android:inputType="numberDecimal"
+            android:inputType="numberDecimal|numberSigned"
             android:textSize="10pt"
             android:hint="@string/longitude"
             />
