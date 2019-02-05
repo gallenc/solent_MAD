@@ -15,5 +15,5 @@ the main Activity;
 there should be separate EditTexts for first name, 
 last name, phone number and address, as shown in 
 
+![alt text](../AddressBook1/addressbook.png "Figure addressbook.png")
 
-https://github.com/gallenc/solent1Public/blob/master/AddressBook1/addressbook.png
