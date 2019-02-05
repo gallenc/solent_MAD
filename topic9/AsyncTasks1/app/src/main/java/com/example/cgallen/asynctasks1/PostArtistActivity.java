@@ -20,7 +20,8 @@ import java.net.URL;
 
 public class PostArtistActivity extends AppCompatActivity implements OnClickListener {
 
-    private static final String BASE_URL = "http://www.free-map.org.uk/course/mad/ws/hits.php";
+    // note change from http://www.free-map.org.uk/course/mad/ws/hits.php
+    private static final String BASE_URL = "http://www.free-map.org.uk/course/ws/hits.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

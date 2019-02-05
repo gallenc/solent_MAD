@@ -21,7 +21,7 @@ import java.net.URL;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
 
-    private static final String BASE_URL = "http://www.free-map.org.uk/course/mad/ws/hits.php";
+    private static final String BASE_URL = "http://www.free-map.org.uk/course/ws/hits.php";
     private static final String ARTIST_QUERY="artist=";
 
     @Override
