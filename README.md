@@ -4,6 +4,34 @@ Exercises for Solent University Mobile Application Development SWD504
 The course material for each session is available here
 https://edward2.solent.ac.uk/course/mad (Only available for logged in Solent Students)
 
+# Example Answers
+My examples are listed below (do not look at until you try for yourself)
+
+[Topic 1 Introduction](../master/topic1)
+
+[Topic 2 Layouts and Event Handling](../master/topic2)
+
+[Topic 3 Mapping](../master/topic3)
+
+[Topic 4 Menus and Multiple Activities](../master/topic4)
+
+[Topic 5 Preferences](../master/topic5)
+
+[Topic 6 Lists](../master/topic6)
+
+[Topic 7 Exceptions](../master/topic7)
+
+[Topic 8 File I/O](../master/topic8)
+
+[Topic 9 AsyncTask and Network Communication](../master/topic9)
+
+[Topic 10 JSON parsing](../master/topic10)
+
+[Topic 11 Further Mapping: Markers](../master/topic11)
+
+[Topic 12 Location and GPS](../master/topic12)
+
+[Topic 13 Fragments](../master/topic13)
 
 # Getting Started - Using Git
 
