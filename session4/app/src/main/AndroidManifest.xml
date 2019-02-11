@@ -23,8 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".mapChooseActivity" android:label="@string/selectmap">
         </activity>
+=======
+>>>>>>> 1cfe8bf2fb52a1ce27cc902026a8e7223a22b67e
     </application>
 
 </manifest>

@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
+<<<<<<< HEAD
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -58,6 +59,8 @@
             android:text="@string/go"
             />
     </LinearLayout>
+=======
+>>>>>>> 1cfe8bf2fb52a1ce27cc902026a8e7223a22b67e
     <org.osmdroid.views.MapView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -66,5 +69,8 @@
         android:id="@+id/map1"
         tilesource="Mapnik"
         />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1cfe8bf2fb52a1ce27cc902026a8e7223a22b67e
 </LinearLayout>
