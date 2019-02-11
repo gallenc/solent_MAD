@@ -11,6 +11,7 @@ import android.widget.EditText;
 
 
 import org.osmdroid.config.Configuration;
+import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
 import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.MapView;
 
@@ -62,11 +63,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         {
             // react to the menu item being selected...
             Intent intent = new Intent(this, MapChooseActivity.class);
-            startActivity(intent);
+            startActivityForResult(intent,0);
             return true;
 
         }
         return false;
+    }
+    protected void onActivityResult(int requestCode,int resultCode,Intent intent)
+    {
+
+        if(requestCode==0)
+        {
+
+            if (resultCode==RESULT_OK)
+            {
+                Bundle extras=intent.getExtras();
+                boolean hikebikemap = extras.getBoolean("com.example.hikebikemap");
+                if(hikebikemap==true)
+                {
+                    mv.setTileSource(TileSourceFactory.HIKEBIKEMAP);
+                }
+                else
+                {
+                    mv.setTileSource(TileSourceFactory.MAPNIK);
+                }
+            }
+        }
     }
 
 
