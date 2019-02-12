@@ -1,6 +1,6 @@
 ## Mobile Application Development - Part 5 Persistence I - Preferences
 
-http://www.free-map.org.uk/course//mad/part5.php
+My implimentation of Preferences [Part 5 Persistence I - Preferences](https://edward2.solent.ac.uk/course/mad/part5.xhtml) 
 
 ## My implimentation of Preferences Exercise
 
