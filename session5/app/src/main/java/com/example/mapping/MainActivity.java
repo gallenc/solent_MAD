@@ -1,5 +1,6 @@
 package com.example.mapping;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 {
 
     MapView mv;
+    boolean isRecording;
 
     /** Called when the activity is first created. */
     @Override
@@ -49,6 +51,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mv.getController().setCenter(new GeoPoint(51.05, -0.72));
 
+        if (savedInstanceState != null)
+        {
+            isRecording = savedInstanceState.getBoolean ("isRecording");
+        }
     }
     public boolean onCreateOptionsMenu(Menu menu)
     {
@@ -102,6 +108,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mv.getController().setCenter(new GeoPoint(lat, lon));
         }
 
+
+
+    public void onResume()
+    {
+        super.onResume();
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        double lat = Double.parseDouble ( prefs.getString("lat", "50.9") );
+        double lon = Double.parseDouble ( prefs.getString("lon", "-1.4") );
+        boolean autodownload = prefs.getBoolean("autodownload", true);
+        String pizzaCode = prefs.getString("pizza", "NONE");
+
+        // do something with the preference data...
+    }
+    public void onDestroy()
+    {
+        super.onDestroy();
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putBoolean ("isRecording", isRecording);
+        editor.commit();
+    }
+    public void onSaveInstanceState (Bundle savedInstanceState)
+    {
+        savedInstanceState.putBoolean("isRecording", isRecording);
+    }
 
 
 
