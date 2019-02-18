@@ -1,5 +1,6 @@
 package com.example.cgallen.hellomap;
 
+import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -19,6 +20,15 @@ public class ExampleListActivity1 extends ListActivity
 
     public void onListItemClick(ListView lv, View view, int index, long id) {
         // handle list item selection
+
+        // this ceates a simpe pop up as an example action
+        String message = " you selected "+data[index];
+        popupMessage(message);
+    }
+
+
+    private void popupMessage(String message) {
+        new AlertDialog.Builder(this).setPositiveButton("OK", null).setMessage(message).show();
     }
 }
 
