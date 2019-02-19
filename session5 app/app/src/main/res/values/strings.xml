@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">mapping</string>
+    <string name="go">Go!</string>
+    <string name="latitude">latitude</string>
+    <string name="longitude">longitude</string>
+    <string name="regularview">regular view</string>
+    <string name="hikebikemapview">hike n\' bike view</string>
+    <string name="selectmap">select map</string>
+    <string name="choosemap">choose map</string>
+
+</resources>
