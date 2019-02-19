@@ -73,6 +73,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return true;
 
         }
+        if(item.getItemId() == R.id.preferences)
+        {
+            Intent intent = new Intent(this, MyPrefsActivity.class);
+            startActivityForResult(intent, 1);
+            return true;
+        }
         return false;
     }
     protected void onActivityResult(int requestCode,int resultCode,Intent intent)
@@ -93,6 +99,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 {
                     mv.setTileSource(TileSourceFactory.MAPNIK);
                 }
+
             }
         }
     }

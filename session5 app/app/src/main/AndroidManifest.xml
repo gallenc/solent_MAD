@@ -27,6 +27,8 @@
             android:name=".MapChooseActivity"
             android:label="@string/selectmap">
         </activity>
+        <activity android:name=".MyPrefsActivity"
+            android:label="preferences"/>
 
     </application>
 
