@@ -23,8 +23,8 @@ public class Clock {
 
     public void setTime(int hoursIn, int minutesIn, int secondsIn) throws TimeException{
         if (hoursIn>24 || hoursIn<0) throw new  TimeException("out of bounds hoursIn: "+hoursIn);
-        if (minutesIn>60 || minutesIn<0) throw new  TimeException("out of bounds minutesIn: "+minutesIn);
-        if (secondsIn>60 || secondsIn<0) throw new  TimeException("out of bounds minutesIn: "+secondsIn);
+        if (minutesIn>59 || minutesIn<0) throw new  TimeException("out of bounds minutesIn: "+minutesIn);
+        if (secondsIn>59 || secondsIn<0) throw new  TimeException("out of bounds minutesIn: "+secondsIn);
         hours = hoursIn;
         minutes=minutesIn;
         seconds=secondsIn;
