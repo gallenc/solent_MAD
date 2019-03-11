@@ -16,6 +16,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
@@ -23,7 +25,7 @@ import java.net.URLEncoder;
 public class PostArtistActivity extends AppCompatActivity implements OnClickListener {
     private static final String LOG_TAG = MainActivity.class.getName();
 
-    private static final String BASE_URL = "http://www.free-map.org.uk/course/mad/ws/addhit.php";
+    private static final String BASE_URL = "http://www.free-map.org.uk/course/ws/addhit.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,6 +106,9 @@ public class PostArtistActivity extends AppCompatActivity implements OnClickList
                     return "HTTP ERROR: " + conn.getResponseCode();
                 }
             } catch (IOException e) {
+                StringWriter errors = new StringWriter();
+                e.printStackTrace(new PrintWriter(errors));
+                System.out.println("debug: "+errors.toString());
                 return e.toString();
             } finally {
                 if (conn != null) {

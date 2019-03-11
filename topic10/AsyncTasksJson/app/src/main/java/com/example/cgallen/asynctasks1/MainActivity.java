@@ -33,7 +33,7 @@ import android.util.Log;
 public class MainActivity extends AppCompatActivity implements OnClickListener {
     private static final String LOG_TAG = MainActivity.class.getName();
 
-    private static final String BASE_URL = "http://www.free-map.org.uk/course/mad/ws/hits.php";
+    private static final String BASE_URL = "http://www.free-map.org.uk/course/ws/hits.php";
     private static final String ARTIST_QUERY = "artist=";
     private static final String REQUEST_JSON = "&format=json";
 
@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 for (int i = 0; i < jsonArr.length(); i++) {
                     JSONObject curObj = jsonArr.getJSONObject(i);
                     // "song":"The Importance of Being Idle","artist":"Oasis","year":"2005","month":"Nov","chart":"7","ID":"15","quantity":"198"
-                    String song = curObj.getString("song");
+                    String song = curObj.getString("title");
                     String artist = curObj.getString("artist");
                     String year = curObj.getString("year");
                     String month = curObj.getString("month");
@@ -148,7 +148,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                     String ID = curObj.getString("ID");
                     String quantity = curObj.getString("quantity");
 
-                    text.append("song=" + song + " " +
+                    text.append("title=" + song + " " +
                             ", artist=" + artist + " " +
                             ", year=" + year + " " +
                             ", month=" + month + " " +
