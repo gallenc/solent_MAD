@@ -1,0 +1,32 @@
+Water Margin,Chinese,North Baddesley,-1.44068,50.9794
+South Garden Chinese Restaurant,Chinese,Hampshire,-1.49974,50.9883
+Purbani Tandoori Restaurant and Take Away,Indian,Hampshire,-1.4997,50.9882
+Charlie Chans,Chinese,Hampshire,-1.39916,50.8983
+Bitterne Balti,Indian,Bitterne,-1.37573,50.9244
+Royal Bengal,Indian,Hampshire,-1.32895,50.862
+The Thai Corner Restaurant,Thai,Southampton,-1.40016,50.8697
+Jewels,Indian,Burgess Road Southampton,-1.35246,50.9329
+Kutis Royal Thai Pier,Thai,Southampton,-1.40703,50.897
+Mandarin Chef,Chinese,Hampshire,-1.46734,50.9977
+ASDA Cafe,General,Asda Southampton,-1.40777,50.906
+Pizza Hut,Pizza,Southampton,-1.40737,50.9034
+Yo! Sushi,Japanese,Southampton,-1.40778,50.9036
+Supreme Chinese Restaurant,Chinese,Hampshire,-1.40364,50.905
+Bella Italia,Italian,Southampton,-1.40469,50.9064
+Spice of Life (B level),Indian,Hampshire,-1.43428,50.933
+Jewel in the Crown,Indian,Hampshire,-1.42655,50.9172
+La Parisienne,French,Hampshire,-1.49963,50.988
+Saras,Thai,Portswood,-1.39062,50.9271
+Prezzo,Italian,Hampshire,-1.39848,50.8983
+Thai Cottage,Thai,Chandlers Ford,-1.38213,50.9825
+Peking Phoenix,Chinese,Hampshire,-1.35369,50.9693
+Bellinis,Italian,Hampshire,-1.3986,50.8978
+El Rancho,Mexican,Hampshire,-1.40366,50.8992
+Namaste Kerala,South Indian,Southampton,-1.40495,50.907
+Prezzo Romsey,Italian,Romsey,-1.49592,50.9878
+Windhover Manor,General,Bursledon,-1.31755,50.8948
+Sunrise Balti and Tandoori,Indian,Hampshire,-1.3764,50.9873
+Ennios,Italian,Hampshire,-1.40515,50.8968
+Dodgy Dereks,General,Southampton,-1.4,50.9
+Freds Fish N Chips,Fish and Chips,Southampton,-1.4,50.91
+Red Lion,pub,East Meon,-1,51

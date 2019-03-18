@@ -3,9 +3,11 @@ package com.example.cgallen.hellomap;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.osmdroid.config.Configuration;
@@ -18,6 +20,11 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 
 import android.util.Log;
@@ -25,7 +32,9 @@ import android.util.Log;
 public class MapOverlayAppActivity extends Activity {
     private static final String LOG_TAG = MapOverlayAppActivity.class.getName();
 
-    private static final String POI_FILE="poi.txt";
+    private static final String POI_FILE="restaurants.txt";
+
+    public static final String DOWNLOAD_URL= "https://edward2.solent.ac.uk/course/mad/restaurants.txt";
 
     MapView mv;
     ItemizedIconOverlay<OverlayItem> items;
@@ -47,39 +56,30 @@ public class MapOverlayAppActivity extends Activity {
         //-1.4011,50.9319 crown pub
         mv.getController().setCenter(new GeoPoint(50.9319, -1.4011));
 
-        markerGestureListener = new ItemizedIconOverlay.OnItemGestureListener<OverlayItem>() {
-            public boolean onItemLongPress(int i, OverlayItem item)
-            {
-                Toast.makeText(MapOverlayAppActivity.this, item.getSnippet(), Toast.LENGTH_SHORT).show();
-                return true;
-            }
-
-            public boolean onItemSingleTapUp(int i, OverlayItem item)
-            {
-                Toast.makeText(MapOverlayAppActivity.this, item.getSnippet(), Toast.LENGTH_SHORT).show();
-                return true;
-            }
-        };
+        markerGestureListener = new MyOnItemGestureListener();
 
         items = new ItemizedIconOverlay<OverlayItem>(this, new ArrayList<OverlayItem>(), markerGestureListener);
 
-        // TODO REMOVE this simply adds one marker for test
-        //OverlayItem blackdown = new OverlayItem("Blackdown", "highest point in West Sussex", new GeoPoint(51.0581, -0.6897));
-        // NOTE is just this.getDrawable() if supporting API 21+ only
-       // blackdown.setMarker(getResources().getDrawable(R.drawable.marker));
-        // items.addItem(blackdown);
-       // ArrayList<OverlayItem> itemslist2 = new ArrayList<OverlayItem>();
-       // itemslist2.add(blackdown);
-       // items.addItems(itemslist2);
-
-        // this adds from file
+        // add files if file exists
         ArrayList<OverlayItem> itemslist = csvFileToOverlays();
         items.addItems(itemslist);
-
         mv.getOverlays().add(items);
 
     }
 
+    public class MyOnItemGestureListener implements ItemizedIconOverlay.OnItemGestureListener<OverlayItem> {
+        public boolean onItemLongPress(int i, OverlayItem item)
+        {
+            Toast.makeText(MapOverlayAppActivity.this, item.getSnippet(), Toast.LENGTH_SHORT).show();
+            return true;
+        }
+
+        public boolean onItemSingleTapUp(int i, OverlayItem item)
+        {
+            Toast.makeText(MapOverlayAppActivity.this, item.getSnippet(), Toast.LENGTH_SHORT).show();
+            return true;
+        }
+    };
 
 
     private ArrayList<OverlayItem> csvFileToOverlays() {
@@ -161,9 +161,70 @@ public class MapOverlayAppActivity extends Activity {
                 break;
         }
 
-
-
         return marker;
+    }
+
+
+    // load map points into new file
+    class GetSongsTask extends AsyncTask<Void, Void, String> {
+
+        @Override
+        public String doInBackground(Void... empty) {
+
+            String queryUrl = DOWNLOAD_URL;
+            HttpURLConnection conn = null;
+            PrintWriter writer=null;
+            try {
+                File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + POI_FILE);
+                writer = new PrintWriter(file, "UTF-8");
+
+                // read file from url
+                URL url = new URL(queryUrl);
+                conn = (HttpURLConnection) url.openConnection();
+                InputStream in = conn.getInputStream();
+                if (conn.getResponseCode() == 200) {
+                    BufferedReader br = new BufferedReader(new InputStreamReader(in));
+                    String line;
+                    while ((line = br.readLine()) != null) {
+                        writer.println(line);
+                    }
+                    writer.close();
+                } else {
+                    writer.close();
+                    return "HTTP ERROR: " + conn.getResponseCode();
+                }
+            } catch (IOException e) {
+                return "ERROR reading into file "+e.toString();
+            } finally {
+                if (conn != null) {
+                    conn.disconnect();
+                }
+                if (writer!=null){
+                    writer.close();
+                }
+            }
+            return null;
+        }
+
+
+        @Override
+        public void onPostExecute(String result) {
+            if (result!=null) {
+                popupMessage(result);
+            } else {
+                markerGestureListener = new MyOnItemGestureListener();
+                items = new ItemizedIconOverlay<OverlayItem>(MapOverlayAppActivity.this, new ArrayList<OverlayItem>(), markerGestureListener);
+                // this adds from file
+                ArrayList<OverlayItem> itemslist = csvFileToOverlays();
+                items.addItems(itemslist);
+
+                mv.getOverlays().add(items);
+
+            }
+
+        }
+
+
     }
 
 }
