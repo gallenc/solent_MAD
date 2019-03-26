@@ -4,9 +4,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView android:id="@+id/tv1"
+    <org.osmdroid.views.MapView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_world" /> <!-- imagine the string hello_world is defined as "Hello Fragment World!" in strings.xml -->
+        android:enabled="true"
+        android:clickable="true"
+        android:id="@+id/map1"
+        tilesource="Mapnik"
+        />
 
 </LinearLayout>

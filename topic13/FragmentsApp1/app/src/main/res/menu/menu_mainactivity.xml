@@ -1,5 +1,5 @@
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/fragmentexx1" android:title="Fragment Exercise 1"/>
-    <item android:id="@+id/fragmentexx2" android:title="Fragment Exercise 2"/>
+    <item android:id="@+id/fragmentexx1" android:title="Fragment Example 1"/>
+    <item android:id="@+id/fragmentexercise1" android:title="Fragment Exercise 1 Map"/>
 </menu>
