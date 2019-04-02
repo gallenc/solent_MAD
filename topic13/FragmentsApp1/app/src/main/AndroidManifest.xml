@@ -27,6 +27,7 @@
         </activity>
         <activity android:name=".FragActivity" android:label="Example 1 FragActivity" />
         <activity android:name=".MapExx1Activity" android:label="Exercise 1 Map Fragement Activity" />
+        <activity android:name=".SubMenuActivity" android:label="Example Submenu Activity" />
     </application>
 
 </manifest>

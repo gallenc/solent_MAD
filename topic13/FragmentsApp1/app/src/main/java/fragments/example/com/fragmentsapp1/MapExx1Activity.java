@@ -3,11 +3,13 @@ package fragments.example.com.fragmentsapp1;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-public class MapExx1Activity extends Activity {
+public class MapExx1Activity  extends AppCompatActivity {
+
 
     //London: latitude 51.51, longitude -0.1
     public static final Double LONDON_LAT = 51.51;

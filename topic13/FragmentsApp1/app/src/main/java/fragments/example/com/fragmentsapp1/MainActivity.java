@@ -32,25 +32,19 @@ public class MainActivity extends AppCompatActivity {
             // react to the menu item being selected...
             Intent intent = new Intent(this,FragActivity.class);
             startActivityForResult(intent,0);
-            // startActivity(intent);
             return true;
         } else  if(item.getItemId() == R.id.fragmentexercise1) {
 
             Intent intent = new Intent(this,MapExx1Activity.class);
             startActivityForResult(intent,0);
-            // startActivity(intent);
-            return true;
-            //create a map activity fragment
-            // react to the menu item being selected...
-            //Intent requestIntent = new Intent(this,ChooseLocationActivity.class);
-            //Bundle bundle=new Bundle();
-            //bundle.putDouble("com.example.cgallen.hellomap.laitude",latitude);
-            //bundle.putDouble("com.example.cgallen.hellomap.longitude",longitude);
-           // bundle.putInt("com.example.cgallen.hellomap.zoom",zoom);
-           // requestIntent.putExtras(bundle);
 
-           // startActivityForResult(requestIntent,1);
-           // return true;
+            return true;
+        } else  if(item.getItemId() == R.id.submenuactivity) {
+
+            Intent intent = new Intent(this,SubMenuActivity.class);
+            startActivityForResult(intent,0);
+
+            return true;
         }
         return false;
     }
