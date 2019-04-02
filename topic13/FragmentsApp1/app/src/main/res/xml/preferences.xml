@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:defaultValue="50.9"
+        android:key="lat"
+        android:summary="Latitude to show the map at initially."
+        android:title="Latitude"
+        />
+    <EditTextPreference
+        android:defaultValue="-1.4"
+        android:key="lon"
+        android:summary="Longitude to show the map at initially."
+        android:title="Longitude" />
+</PreferenceScreen>
