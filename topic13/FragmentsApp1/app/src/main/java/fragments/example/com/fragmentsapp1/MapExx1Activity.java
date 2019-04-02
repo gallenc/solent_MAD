@@ -29,10 +29,6 @@ public class MapExx1Activity  extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mapexx1activity);
 
-
-
-        //PersonDetailsFragment personDetailsFrag = (PersonDetailsFragment)getFragmentManager().findFragmentById(R.id.personDetailsFrag);
-        // personDetailsFrag.setText("Details on a famous person will appear here!");
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {

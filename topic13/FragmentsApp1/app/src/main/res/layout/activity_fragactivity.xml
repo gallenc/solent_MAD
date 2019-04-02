@@ -4,13 +4,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
-    <fragment class="fragments.example.com.fragmentsapp1.PersonDetailsFragment"
+    <fragment
+        android:id="@+id/listFrag"
+        class="fragments.example.com.fragmentsapp1.ListFrag"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/personDetailsFrag">
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
-    </fragment>
-
+    <fragment
+        android:id="@+id/personDetailsFrag"
+        class="fragments.example.com.fragmentsapp1.PersonDetailsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
 </LinearLayout>
