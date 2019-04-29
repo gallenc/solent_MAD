@@ -90,6 +90,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivityForResult(intent, 1);
             return true;
         }
+        if(item.getItemId() == R.id.createPOI)
+        {
+            Intent intent = new Intent(this, poi.class);
+            startActivityForResult(intent, 1);
+            return true;
+        }
         return false;
     }
 
@@ -170,11 +176,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     {
         super.onResume();
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        double lat = Double.parseDouble ( prefs.getString("lat", "50.9") );
-        double lon = Double.parseDouble ( prefs.getString("lon", "-1.4") );
-        boolean autodownload = prefs.getBoolean("autodownload", true);
-        mv.getController().setCenter(new GeoPoint(lat, lon));
-
 
         // do something with the preference data...
     }
