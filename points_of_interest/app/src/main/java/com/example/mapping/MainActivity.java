@@ -30,7 +30,7 @@ import android.location.Location;
 
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, LocationListener
 {
 
     MapView mv;
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mgr.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,0,this);
 
 
-        mv.getController().setCenter(new GeoPoint(this, this));
+        mv.getController().setCenter(new GeoPoint(52, 0.72));
 
         if (savedInstanceState != null)
         {
@@ -93,7 +93,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return false;
     }
 
-    public void onLocationChanged(Location newLoc)
+    public void onLocationChanged(Location newLoc) {
+        Double lat = (newLoc.getLatitude());
+        Double lng = (newLoc.getLongitude());
+
+        mv.getController().setCenter(new GeoPoint(lat, lng));
+
+    }
+
+    /*public void onLocationChanged(Location newLoc)
     {
 
         Toast.makeText
@@ -102,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         newLoc.getLongitude() , Toast.LENGTH_LONG).show();
     }
 
-    public void onProviderDisabled(String provider)
+    */public void onProviderDisabled(String provider)
     {
         Toast.makeText(this, "Provider " + provider +
                 " disabled", Toast.LENGTH_LONG).show();
@@ -112,6 +120,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     {
         Toast.makeText(this, "Provider " + provider +
                 " enabled", Toast.LENGTH_LONG).show();
+
     }
 
     public void onStatusChanged(String provider,int status,Bundle extras)
@@ -177,11 +186,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editor.putBoolean ("isRecording", isRecording);
         editor.commit();
     }
-    public void onSaveInstanceState (Bundle savedInstanceState)
+   /* public void onSaveInstanceState (Bundle savedInstanceState)
     {
         savedInstanceState.putBoolean("isRecording", isRecording);
     }
-
+*/
 
 
 }
