@@ -20,6 +20,14 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.content.Intent;
+import android.widget.Toast;
+
+import android.content.Context;
+import android.location.LocationManager;
+import android.location.LocationListener;
+import android.location.Location;
+
+
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
@@ -48,8 +56,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mv.setBuiltInZoomControls(true);
         mv.getController().setZoom(16);
+        LocationManager mgr=(LocationManager)getSystemService(Context.LOCATION_SERVICE);
+        mgr.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,0,this);
 
-        mv.getController().setCenter(new GeoPoint(51.05, -0.72));
+
+        mv.getController().setCenter(new GeoPoint(this, this));
 
         if (savedInstanceState != null)
         {
@@ -81,6 +92,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         return false;
     }
+
+    public void onLocationChanged(Location newLoc)
+    {
+
+        Toast.makeText
+                (this, "Location=" +
+                        newLoc.getLatitude()+ " " +
+                        newLoc.getLongitude() , Toast.LENGTH_LONG).show();
+    }
+
+    public void onProviderDisabled(String provider)
+    {
+        Toast.makeText(this, "Provider " + provider +
+                " disabled", Toast.LENGTH_LONG).show();
+    }
+
+    public void onProviderEnabled(String provider)
+    {
+        Toast.makeText(this, "Provider " + provider +
+                " enabled", Toast.LENGTH_LONG).show();
+    }
+
+    public void onStatusChanged(String provider,int status,Bundle extras)
+    {
+
+        Toast.makeText(this, "Status changed: " + status,
+                Toast.LENGTH_LONG).show();
+    }
+
     protected void onActivityResult(int requestCode,int resultCode,Intent intent)
     {
 
