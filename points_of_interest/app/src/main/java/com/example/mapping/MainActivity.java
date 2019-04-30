@@ -5,27 +5,22 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-
 import android.widget.Button;
 import android.widget.EditText;
-
-
-
 import org.osmdroid.config.Configuration;
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
 import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.MapView;
-
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.content.Intent;
 import android.widget.Toast;
-
 import android.content.Context;
 import android.location.LocationManager;
 import android.location.LocationListener;
 import android.location.Location;
+import com.example.mapping.Poi;
 
 
 
@@ -92,11 +87,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if(item.getItemId() == R.id.createPOI)
         {
-            Intent intent = new Intent(this, poi.class);
-            startActivityForResult(intent, 1);
+            System.out.println("debug message, create Poi pressed");
+            Intent intent = new Intent(this, Poi.class);
+            startActivityForResult(intent, 2);
             return true;
         }
         return false;
+    }
+
+    private void startActivityForResults(Intent intent, int i) {
     }
 
     public void onLocationChanged(Location newLoc) {
