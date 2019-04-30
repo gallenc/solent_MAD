@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     {
         for (POI poi :PoiList.getPoilist())
         {
-            OverlayItem poiOverlay = new OverlayItem(PoiList.getPoilist()., PoiList.getPoilist() + PoiList.getPoilist(), new GeoPoint(PoiList.getPoilist(), PoiList.getPoilist()));
+            OverlayItem poiOverlay = new OverlayItem(poi.getName(), poi.getType() + poi.getDescription(), new GeoPoint(poi.getLat(), poi.getLon()));
             items.addItem(poiOverlay);
         }
 
@@ -187,6 +187,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String typeIn=extras.getString("type_key");
                 String descIn=extras.getString("desc_key");
                 OverlayItem poiOverlay = new OverlayItem(nameIn, typeIn + descIn, new GeoPoint(latitude, longitude));
+
                 items.addItem(poiOverlay);
                 mv.getOverlays().add(items);
 
