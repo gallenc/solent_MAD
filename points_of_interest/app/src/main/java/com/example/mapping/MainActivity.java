@@ -21,8 +21,10 @@ import android.location.LocationManager;
 import android.location.LocationListener;
 import android.location.Location;
 import com.example.mapping.Poi;
+import org.osmdroid.views.overlay.ItemizedIconOverlay;
+import org.osmdroid.views.overlay.OverlayItem;
 
-
+import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, LocationListener
@@ -30,7 +32,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     MapView mv;
     boolean isRecording;
-
+    public static double latitude;
+    public static double longitude;
+    ItemizedIconOverlay<OverlayItem> items;
     /** Called when the activity is first created. */
     @Override
 
@@ -61,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         {
             isRecording = savedInstanceState.getBoolean ("isRecording");
         }
+        items = new ItemizedIconOverlay<OverlayItem>(this, new ArrayList<OverlayItem>(), null);
     }
     public boolean onCreateOptionsMenu(Menu menu)
     {
@@ -103,7 +108,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Double lng = (newLoc.getLongitude());
 
         mv.getController().setCenter(new GeoPoint(lat, lng));
-
+        latitude = lat;
+        longitude = lng;
     }
 
     /*public void onLocationChanged(Location newLoc)
@@ -135,7 +141,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.LENGTH_LONG).show();
     }
 
-    protected void onActivityResult(int requestCode,int resultCode,Intent intent)
+    /*protected void onActivityResult(int requestCode,int resultCode,Intent intent)
     {
 
         if(requestCode==0)
@@ -156,8 +162,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             }
         }
-    }
+    }*/
+    protected void onActivityResult(int requestCode,int resultCode,Intent intent)
+    {
 
+        if(requestCode==2)
+        {
+
+            if (resultCode==RESULT_OK)
+            {
+                Bundle extras=intent.getExtras();
+                String nameIn=extras.getString("name_key");
+                String typeIn=extras.getString("type_key");
+                String descIn=extras.getString("desc_key");
+                OverlayItem POI = new OverlayItem(nameIn, typeIn + descIn, new GeoPoint(latitude, longitude));
+                items.addItem(POI);
+                mv.getOverlays().add(items);
+
+            }
+        }
+    }
 
 
     public void onClick(View view)
@@ -168,7 +192,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             double lat = Double.parseDouble(et2.getText().toString());
             mv.getController().setCenter(new GeoPoint(lat, lon));
         }
-
 
 
     public void onResume()

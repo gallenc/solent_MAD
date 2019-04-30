@@ -38,7 +38,7 @@
             android:text="@string/type_of_poi"
             />
         <EditText
-            android:id="@+id/et1"
+            android:id="@+id/et2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -58,7 +58,7 @@
             android:text="@string/desc_of_poi"
             />
         <EditText
-            android:id="@+id/et1"
+            android:id="@+id/et3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -70,5 +70,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/submit"
-        android:id="@+id/btnRegular" />
+        android:id="@+id/btnAddPoi" />
 </LinearLayout>
