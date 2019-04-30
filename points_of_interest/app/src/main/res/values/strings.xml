@@ -7,5 +7,9 @@
     <string name="hikebikemapview">hike n\' bike view</string>
     <string name="selectmap">select map</string>
     <string name="choosemap">choose map</string>
+    <string name="Name_of_poi">Name Of POI</string>
+    <string name="submit">submit</string>
+    <string name="type_of_poi">Type Of POI</string>
+    <string name="desc_of_poi">Description</string>
 
 </resources>
