@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 
-public class Poi extends AppCompatActivity implements View.OnClickListener{
+public class PoiActivity extends AppCompatActivity implements View.OnClickListener{
 
     public void onCreate(Bundle savedInstanceState)
     {

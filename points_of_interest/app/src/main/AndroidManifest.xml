@@ -30,7 +30,7 @@
         <activity android:name=".MyPrefsActivity"
             android:label="preferences"/>
         <activity
-            android:name=".Poi"
+            android:name=".PoiActivity"
             android:label="createPOI" />
 
     </application>

@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import org.osmdroid.config.Configuration;
-import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
 import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.MapView;
 import android.view.Menu;
@@ -20,7 +19,7 @@ import android.content.Context;
 import android.location.LocationManager;
 import android.location.LocationListener;
 import android.location.Location;
-import com.example.mapping.Poi;
+
 import org.osmdroid.views.overlay.ItemizedIconOverlay;
 import org.osmdroid.views.overlay.OverlayItem;
 
@@ -66,6 +65,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             isRecording = savedInstanceState.getBoolean ("isRecording");
         }
         items = new ItemizedIconOverlay<OverlayItem>(this, new ArrayList<OverlayItem>(), null);
+
+
+
+    }
+    private void addPoiToMap()
+    {
+        for (POI poi :PoiList.getPoilist())
+        {
+            OverlayItem poiOverlay = new OverlayItem(PoiList.getPoilist()., PoiList.getPoilist() + PoiList.getPoilist(), new GeoPoint(PoiList.getPoilist(), PoiList.getPoilist()));
+            items.addItem(poiOverlay);
+        }
+
     }
     public boolean onCreateOptionsMenu(Menu menu)
     {
@@ -92,8 +103,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if(item.getItemId() == R.id.createPOI)
         {
-            System.out.println("debug message, create Poi pressed");
-            Intent intent = new Intent(this, Poi.class);
+            System.out.println("debug message, create PoiActivity pressed");
+            Intent intent = new Intent(this, PoiActivity.class);
             startActivityForResult(intent, 2);
             return true;
         }
@@ -175,8 +186,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String nameIn=extras.getString("name_key");
                 String typeIn=extras.getString("type_key");
                 String descIn=extras.getString("desc_key");
-                OverlayItem POI = new OverlayItem(nameIn, typeIn + descIn, new GeoPoint(latitude, longitude));
-                items.addItem(POI);
+                OverlayItem poiOverlay = new OverlayItem(nameIn, typeIn + descIn, new GeoPoint(latitude, longitude));
+                items.addItem(poiOverlay);
                 mv.getOverlays().add(items);
 
             }
