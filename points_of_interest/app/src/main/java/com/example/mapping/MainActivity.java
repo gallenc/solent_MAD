@@ -108,6 +108,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivityForResult(intent, 2);
             return true;
         }
+        if(item.getItemId() == R.id.loadPoi)
+        {
+            PoiList.loadPoi();
+            for(POI poi :PoiList.getPoilist())
+            {
+                PoiList.loadPoi();
+            }
+                System.out.println("debug message load");
+        }
         return false;
     }
 
@@ -220,6 +229,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         SharedPreferences.Editor editor = prefs.edit();
         editor.putBoolean ("isRecording", isRecording);
         editor.commit();
+        PoiList.savepoi();
+
+
     }
    /* public void onSaveInstanceState (Bundle savedInstanceState)
     {

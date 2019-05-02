@@ -20,7 +20,7 @@ public class PoiList {
     }
 
 
-    public void loadPoi() {
+    public static void loadPoi() {
         poilist.clear();
         BufferedReader bufferedReader = null;
         FileReader fileReader = null;
@@ -58,7 +58,8 @@ public class PoiList {
 
     }
 
-    public void savepoi() {
+    public static void savepoi()
+    {
 
         PrintWriter printWriter = null;
         try {
