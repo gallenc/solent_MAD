@@ -25,6 +25,8 @@ import org.osmdroid.views.overlay.OverlayItem;
 
 import java.util.ArrayList;
 
+import static com.example.mapping.PoiList.savepoi;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, LocationListener
 {
@@ -111,17 +113,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(item.getItemId() == R.id.loadPoi)
         {
             PoiList.loadPoi();
-            for(POI poi :PoiList.getPoilist())
+            for(POI poi : PoiList.getPoilist())
             {
-                PoiList.loadPoi();
+
+
+                //OverlayItem poiOverlay = new OverlayItem(POI.getName(), POI.getType() + POI.getDescription(), new GeoPoint(POI.getLat(), POI.getLon()));
+
+                //items.addItem(poiOverlay);
+                mv.getOverlays().add(items);
             }
                 System.out.println("debug message load");
+        }
+        if(item.getItemId() == R.id.savePoi)
+        {
+            savepoi();
         }
         return false;
     }
 
-    private void startActivityForResults(Intent intent, int i) {
-    }
+    //private void startActivityForResults(Intent intent, int i) {
+    //}
 
     public void onLocationChanged(Location newLoc) {
         Double lat = (newLoc.getLatitude());
@@ -229,7 +240,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         SharedPreferences.Editor editor = prefs.edit();
         editor.putBoolean ("isRecording", isRecording);
         editor.commit();
-        PoiList.savepoi();
+        savepoi();
 
 
     }

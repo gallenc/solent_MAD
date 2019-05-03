@@ -5,4 +5,5 @@
     <item android:id="@+id/preferences" android:title="preferences"/>
     <item android:id="@+id/createPOI" android:title="Create POI"/>
     <item android:id="@+id/loadPoi" android:title="load POIs" />
+    <item android:id="@+id/savePoi" android:title="save POIs" />
 </menu>

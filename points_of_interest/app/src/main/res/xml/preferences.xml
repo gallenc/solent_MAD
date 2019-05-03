@@ -26,5 +26,12 @@
     android:key="zoom"
     android:summary="Default Zoom to show the map at initially."
     android:title="Zoom" />
+<Button
+    android:id="@+id/storeinformation"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="18dp"
+    android:text="Store Information" />
 </PreferenceScreen>
 

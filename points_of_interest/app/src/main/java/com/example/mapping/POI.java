@@ -1,6 +1,7 @@
 package com.example.mapping;
 
 public class POI {
+
     //The Crown,pub,nice pub,-1.4011,50.9319
 
 /*- name (the point of interest name)
@@ -14,6 +15,14 @@ private String type;
 private String description;
 private Double lat;
 private Double lon;
+
+    public POI() {
+        this.name = name;
+        this.type = type;
+        this.description = description;
+        this.lat = lat;
+        this.lon = lon;
+    }
 
     public String getName() {
         return name;
