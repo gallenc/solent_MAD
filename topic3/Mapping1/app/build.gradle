@@ -28,5 +28,6 @@ dependencies {
 
     // added osmdroid to support mapping
     // note on later sdks this may need to be implementation instead of compile
-    compile 'org.osmdroid:osmdroid-android:5.6.5@aar'
+    // implementation 'org.osmdroid:osmdroid-android:5.6.5@aar'
+    implementation 'org.osmdroid:osmdroid-android:6.1.0'
 }
