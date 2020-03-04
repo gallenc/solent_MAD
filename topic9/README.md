@@ -11,3 +11,6 @@ This is now at
 [http://www.free-map.org.uk/course/ws/hits.php](http://www.free-map.org.uk/course/ws/hits.php)
 
 i.e. a ReST request should work to [http://www.free-map.org.uk/course/ws/hits.php?artist=Madonna](http://www.free-map.org.uk/course/ws/hits.php?artist=Madonna)
+
+
+See also [Android AsyncTask documentation] (https://developer.android.com/reference/android/os/AsyncTask)
