@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         @Override
         public String doInBackground(String... urls) {
 
-            TextView tv1 = (TextView)  findViewById(R.id.tv1);
-            tv1.setText("downloading from "+urls[0]);
+            //TextView tv1 = (TextView)  findViewById(R.id.tv1);
+            //tv1.setText("downloading from "+urls[0]);
 
             // simulate download the file
             String message = "Successfully downloaded!";
