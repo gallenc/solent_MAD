@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //tv1.setText("downloading from "+urls[0]);
 
             // simulate download the file
-            String message = "Successfully downloaded!";
+            String message = "Successfully downloaded "+urls[0];
             try {
                 for (int i=0; i<100; i++){
                     for (int t=0; t<100000; t++) {
