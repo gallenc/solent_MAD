@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Progress Example</string>
+    <string name="button1">Start Activity</string>
+</resources>
