@@ -12,5 +12,8 @@ This is now at
 
 i.e. a ReST request should work to [http://www.free-map.org.uk/course/ws/hits.php?artist=Madonna](http://www.free-map.org.uk/course/ws/hits.php?artist=Madonna)
 
+Alternatively, a new site has also been set up (the fremap.org site may close down)
+[https://hikar.org/course/ws/hits.php?artist=Madonna](https://hikar.org/course/ws/hits.php?artist=Madonna)
+
 
 See also [Android AsyncTask documentation] (https://developer.android.com/reference/android/os/AsyncTask)
