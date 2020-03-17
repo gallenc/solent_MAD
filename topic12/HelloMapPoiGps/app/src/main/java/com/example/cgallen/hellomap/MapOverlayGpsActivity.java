@@ -84,7 +84,8 @@ public class MapOverlayGpsActivity extends Activity implements LocationListener 
         mv.getOverlays().add(items);
 
         // set up location listener
-        mgr.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
+        // need to change minimum distance from 0 to 15 m 
+        mgr.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 15, this);
 
     }
 
